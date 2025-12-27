@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sorpresite</title>
+  <style>
+    :root{
+      --cream:#FFF3C4;
+      --yellow:#F6D365;
+      --brown:#8B5E3C;
+    }
+    *{box-sizing:border-box;font-family:'Segoe UI',sans-serif;}
+    body{
+      margin:0;
+      min-height:100vh;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      background:repeating-linear-gradient(45deg,#fff,#fff 20px,var(--cream) 20px,var(--cream) 40px);
+      color:var(--brown);
+    }
+    .card{
+      width:90%;
+      max-width:420px;
+      background:white;
+      border-radius:24px;
+      padding:24px;
+      box-shadow:0 10px 30px rgba(0,0,0,.15);
+      text-align:center;
+      animation:fade .6s ease;
+    }
+    .hidden{display:none;}
+    h1{margin-bottom:10px;}
+    p{line-height:1.5;}
+    button{
+      margin-top:18px;
+      padding:12px 22px;
+      border:none;
+      border-radius:999px;
+      background:var(--yellow);
+      color:var(--brown);
+      font-weight:600;
+      cursor:pointer;
+    }
+    .img-box{
+      margin:14px 0;
+      animation:float 3s ease-in-out infinite;
+    }
+    .img-box img{
+      width:100%;
+      border-radius:16px;
+    }
+    .collage{
+      display:grid;
+      grid-template-columns:repeat(2,1fr);
+      gap:10px;
+      margin:16px 0;
+    }
+    .collage img{
+      width:100%;
+      border-radius:14px;
+    }
+    @keyframes fade{from{opacity:0;transform:translateY(15px);}to{opacity:1;}}
+    @keyframes float{0%,100%{transform:translateY(0);}50%{transform:translateY(-6px);}}
+  </style>
+</head>
+<body>
+
+  <div class="card" id="p1">
+    <h1> JIIII MI AMOR</h1>
+    <div class="img-box"><img src="1.png"></div>
+    <p>Esta cosite es como mi regalito por nuestro primer añite juntes del cual estamos bine happysotes</p>
+    <button onclick="go(1)">Siguiente</button>
+  </div>
+
+  <div class="card hidden" id="p2">
+    <h1>Quería decirte algo</h1>
+    <div class="img-box"><img src="IMG-20251212-WA0001.jpg"></div>
+    <p>Mi amor, ya pasó un año desde que estamos juntos, un año siendo noviecites,  hemos pasado por muchas cosas en tan poco tiempo, no siempre ha sido perfecto, pero hemos sido nosotros, contigo aprendí a querer mejor, a tener paciencia, a no bloquerame las cosas se ponen difíciles, gracias por quedarte, te amo más de lo que a veces sé expresar</p>
+    <button onclick="go(2)">Siguiente</button>
+  </div>
+
+  <div class="card hidden" id="p3">
+    <h1>Gracias</h1>
+    <div class="img-box"><img src="IMG-20251212-WA0011.jpg"></div>
+    <p>Nuestra manera de ser es very bonite, compartir juntos siempre es lindo, es lindo como nos reimos sin sentido con nuestro humor, cuando no hacemos nada especial pero igual se siente bonito porque estamos los dos, me encanta lo nuestro, nuestras relación, como nos llevamos, la forma en que compartimos todo este año juntos mi amor.</p>
+    <button onclick="go(3)">Siguiente</button>
+  </div>
+
+  <div class="card hidden" id="p4">
+    <h1>Nosotres</h1>
+    <div class="collage">
+      <img src="IMG-20251112-WA0013.jpg"><img src="IMG-20251122-WA0072.jpg"><img src="IMG-20251122-WA0076.jpg"><img src="IMG-20250607-WA0030.jpg">
+    </div>
+    <p>Yo aprecio y simpre recuerdo los momentos que hemos estado juntites mi amor, yo happysote siempre que los recuerdo</p>
+    <button onclick="go(4)">Siguiente</button>
+  </div>
+
+  <div class="card hidden" id="p5">
+    <h1> Te amo muchote mi amor</h1>
+    <p>Muchas gracias por estar conmigo, gracias por ser tu mi amor, yo aprecio mucho poder compartir y estar contigo, YA UN AÑITO MI AMOR, FELIZ PRIEMR AÑITO MI NIÑA</p>
+  </div>
+
+  <script>
+    function go(n){
+      document.getElementById('p'+n).classList.add('hidden');
+      document.getElementById('p'+(n+1)).classList.remove('hidden');
+    }
+  </script>
+
+</body>
+</html>
